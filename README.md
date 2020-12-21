@@ -1,6 +1,11 @@
-#Currency Converter#
+#Currency Converter
 
-###I am using the (http://data.fixer.io) Api to make a currency converter which will convert one currency to another currency to check its corresponding value.###
+###I am using the (http://data.fixer.io) Api to make a currency converter which will convert one currency to another currency to check its corresponding value.
+
+**Api-Snippet**
+
+![JSON Code Snippet](https://ibb.co/gTVz3X5)
+
 
 
 
@@ -28,8 +33,8 @@
 
 **Time-Frame**
 | Component | Priority| Time Invested |Time Invested  |
-| ------------- |:-------------:| -----:| ------:
+| ------------- |:-------------:| -----:| ------------:
 | HTML Structure     | H | 45min |
-| CSS     | H      |   2hr |
+| Flex-box      | H      |   2hr |
 | JavaScript | H     | 3hr |
 
