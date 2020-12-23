@@ -1,12 +1,15 @@
 body { 
-  background-image: url(https://cdn.wallpapersafari.com/13/14/XdZGlu.gif)
+  background-image: url(https://cdn.wallpapersafari.com/13/14/XdZGlu.gif);
+  color: white;
 }
+
 h1 {
   color: white;
   text-align: center;
   font-size: 75px;
   font-family: 'Inconsolata', monospace;
 }
+
 .button {
   color: white;
   text-align: center;
