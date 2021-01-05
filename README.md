@@ -27,14 +27,17 @@ I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a
 - create a loading screen 
 
 
-#Snippet of code 
 
-![Radio buttons code](https://i.imgur.com/up86cdQ.png?1)
 
 
 # Priority Matrix 
 
 ![Priority Matrix](https://i.imgur.com/HjRTNUV.png)
+
+
+#Code Snippet 
+
+![Radio Button](https://i.imgur.com/2syCgZP.png))
 
 # Time-Frame
 | Component | Priority| Time Invested |Actual Time   |
