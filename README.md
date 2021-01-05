@@ -22,8 +22,6 @@ I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a
 
 # Post-MVP
 - Include timer for questions. 
-- include loading screen between questions. 
-- Add input to choose number of questions.
 - Add results screen when the game is completed. 
 
 
@@ -36,7 +34,6 @@ I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a
 | ------------- |:-------------:| -----:| ------:
 | Basic HTML Structure     | H | 3hr |
 | CSS stucture/Flexbox    | H      |   4hr |
-| create loading screen | H     | 4hr |
 | create a timer | L | 4hr |
 | Pull info. from api | H | 7hr 
 | Javascript functions | H |  12hr

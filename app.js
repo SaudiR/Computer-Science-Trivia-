@@ -39,12 +39,16 @@ function triviaGameAnswers(answers) {
   answersDiv.innerHTML = `
   <input type="radio" id="choice-1" name="answer" value=${input1Value}>
   <label for="choice-1">${shuffledAnswers[0]}</label>
+  <br>
   <input type="radio" id="choice-2" name="answer" value=${input2Value}>
   <label for="choice-2">${shuffledAnswers[1]}</label>
+  <br>
   <input type="radio" id="choice-3" name="answer" value=${input3Value}>
   <label for="choice-3">${shuffledAnswers[2]}</label>
+  <br>
   <input type="radio" id="choice-4" name="answer" value=${input4Value}>
   <label for="choice-4">${shuffledAnswers[3]}</label>
+  <br>
   <button class='answerButton'>Submit</button>
   `
   const answerButton = document.querySelector('.answerButton')
