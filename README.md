@@ -46,7 +46,7 @@ I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a
 | CSS stucture/Flexbox    | H    |  9hr | 9hr 
 | create result screen | H | 4hr | 6hr | 6hr
 | Pull info from api | H | 2hr  | 6hr | 6hr 
-| Create radio butons for questions | L |  4hr | 4hr
+| Create radio butons for questions | H |  4hr | 4hr
 |Create start button| H | 1hr | 1hr
 | Shuffle questions | H | 3hr | 3hr 
 
