@@ -3,15 +3,14 @@ const button = document.querySelector('button')
 const answersDiv = document.querySelector('#answers')
 const questionHeading = document.querySelector('#question')
 const triviaDiv = document.querySelector('.triviaDiv')
-
+const container = document.querySelector('.container')
 // Start Game button 
 button.addEventListener('click', getData)
 // retrieve data from api 
 async function getData() {
   let response = await axios.get(`${BASE_URL}`)
-  // show triviaDiv after start button is clicked
   triviaDiv.style.visibility = 'visible'
-  // retrieve questions and answers from api 
+  container.style.visibility = 'visible'
   triviaGameQuestions(response.data.results)
   triviaGameAnswers(response.data.results)
 }
@@ -28,16 +27,16 @@ function triviaGameQuestions(question) {
 
 function triviaGameAnswers(answers) {
   totalQuestions = answers.length
-
+  // used spread operator to make incorrect and correct answers in one array
   const allAnswers = [answers[index].correct_answer, ...answers[index].incorrect_answers]
-  // console.log(allAnswers[0])
+  
   const shuffledAnswers = shuffle(allAnswers)
 
   let input1Value = shuffledAnswers[0].split(' ').join('-')
   let input2Value = shuffledAnswers[1].split(' ').join('-')
   let input3Value = shuffledAnswers[2].split(' ').join('-')
   let input4Value = shuffledAnswers[3].split(' ').join('-')
-   
+  //  creates radio buttons for the answer choices 
   answersDiv.innerHTML = `
   <input type="radio" id="choice-1" name="answer" value=${input1Value}>
   <label for="choice-1">${shuffledAnswers[0]}</label>
@@ -55,7 +54,7 @@ function triviaGameAnswers(answers) {
   <button class='answerButton'>Submit</button>
   `
   const answerButton = document.querySelector('.answerButton')
-  
+  // checks if the selected answer is correct 
   answerButton.addEventListener('click', () => {
     let checked = document.querySelector('input[name="answer"]:checked').value;
     let checkedAnswer = checked.split('-').join(' ')
@@ -79,7 +78,7 @@ function triviaGameAnswers(answers) {
     }
   })
 }
-
+  //  Shuffle the answer choices 
 function shuffle(array) {
   let currentIndex = array.length, temporaryValue, randomIndex
 

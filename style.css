@@ -22,6 +22,7 @@ h1 {
   font-family: 'Inconsolata', monospace;
   margin: 50px;
   font-size: 30px;
+  text-shadow: 2px 2px green;
 }
 
 .triviaDiv {
@@ -79,11 +80,37 @@ h2 {
 @media screen and (max-width: 500px) {
   .button {
     left: 20%;
+    border-style: solid;
+    border-color: orange;
+    border-style: solid;
+    text-shadow: 2px 2px blue;
   }
   .answerButton {
     height: 40px;
     width: 80px;
     font-size: 20px;
     border-radius: 15px;
+  }
+  .triviaDiv {
+    font-size: 25px;
+    border-style: solid;
+    border-color: orange;
+    border-style: solid;
+    border-color: orange;
+    text-shadow: 2px 2px black;
+  }
+
+  .container {
+    font-size: 25px;
+    border-style: solid;
+    border-color: orange;
+    border-style: solid;
+    border-color: orange;
+    text-shadow: 2px 2px black;
+  }
+  h1 {
+    border-style: solid;
+    border-color: orange;
+    text-shadow: 2px 2px blue;
   }
 }
