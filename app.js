@@ -4,15 +4,12 @@ const answersDiv = document.querySelector('#answers')
 const questionHeading = document.querySelector('#question')
 const triviaDiv = document.querySelector('.triviaDiv')
 
-// const questionHeading = document.createElement('div')
-// const section = document.querySelector('section')
-// section.appendChild('questionHeading')
-
 
 button.addEventListener('click', getData)
 
 async function getData() {
   let response = await axios.get(`${BASE_URL}`)
+  triviaDiv.style.visibility = 'visible'
   triviaGameQuestions(response.data.results)
   triviaGameAnswers(response.data.results)
 }
@@ -23,7 +20,7 @@ let currentQuestion = 1
 let totalQuestions 
 
 function triviaGameQuestions(question) {
-
+  // console.log(question[index].question)
   questionHeading.innerText = question[index].question
 }
 
@@ -39,26 +36,21 @@ function triviaGameAnswers(answers) {
   let input3Value = shuffledAnswers[2].split(' ').join('-')
   let input4Value = shuffledAnswers[3].split(' ').join('-')
   // console.log(shuffledAnswers[0])
-
-   answersDiv.innerHTML = `
-  <button class='option' value=${input1Value}>
-  <label for="choice-1">${shuffledAnswers[0]}</button>
-  <br>
-  <button class='option' value=${input2Value}>
-  <label for="choice-2">${shuffledAnswers[1]}</button>
-  <br>
-  <button class='option' value=${input3Value}>
-  <label for="choice-3">${shuffledAnswers[2]}</button>
-  <br>
-  <button class='option' value=${input4Value}>
-  <label for="choice-4">${shuffledAnswers[3]}</button>
-  <br>
+  answersDiv.innerHTML = `
+  <input type="radio" id="choice-1" name="answer" value=${input1Value}>
+  <label for="choice-1">${shuffledAnswers[0]}</label>
+  <input type="radio" id="choice-2" name="answer" value=${input2Value}>
+  <label for="choice-2">${shuffledAnswers[1]}</label>
+  <input type="radio" id="choice-3" name="answer" value=${input3Value}>
+  <label for="choice-3">${shuffledAnswers[2]}</label>
+  <input type="radio" id="choice-4" name="answer" value=${input4Value}>
+  <label for="choice-4">${shuffledAnswers[3]}</label>
+  <button class='answerButton'>Submit</button>
   `
-
-  const answerButton = document.querySelector('.option')
+  const answerButton = document.querySelector('.answerButton')
   
-  button.addEventListener('click', () => {
-    let checked = document.querySelector('input[name="answer"]:checked').Value;
+  answerButton.addEventListener('click', () => {
+    let checked = document.querySelector('input[name="answer"]:checked').value;
     let checkedAnswer = checked.split('-').join(' ')
   
     if (checkedAnswer === answers[index].correct_answer) {
@@ -80,24 +72,6 @@ function triviaGameAnswers(answers) {
   })
 }
 
-// let timeLimit = 10;
-// let startTime = Date.now(); //get the time at the moment a user first sees the question
-// clearInterval(trivia.countDown);
-// trivia.countDown = setInterval(function () {
-//   if (trivia.state == "question") { //ensure the user has not already answered
-//     let elapsedTime = (Date.now() - startTime)/1000; //calculate the time elapsed
-//     let clock = timeLimit - Math.floor(elapsedTime);//calculate the countdown w/o decimals
-//     $('#timer').html(clock);// place the clock time in the html for viewing
-//     if (clock == 0) { //if time is up
-//       clearInterval(trivia.countDown); //stops our timer at 0. Don't want -1 ...
-//       trivia.triggerAnswer(false); //marks the answer as incorrect in trivia library
-//     }
-//   }
-//   else clearInterval(trivia.countDown);
-// }, 100);//100 is the time interval in milliseconds
-
-
-
 function shuffle(array) {
   let currentIndex = array.length, temporaryValue, randomIndex
 
@@ -116,5 +90,5 @@ function endGame() {
     <h2> Thank You for Playing!</h2> 
     <p>Out of ${totalQuestions} questions you scored a total of ${score} points</p>
     `
-}  
-// setTimeout(function(){code here},seconds*1000)
+}
+

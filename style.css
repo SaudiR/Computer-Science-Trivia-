@@ -5,14 +5,20 @@ body {
 h1 {
   color: white ;
   text-align: center;
-  font-size: 75px;
+  font-size: 50px;
   font-family: 'Inconsolata', monospace;
   background-color: black ;  
   border-style: solid;
   border-color: green;
+  text-shadow: 2px 2px green;
 }
 
+/* .triviaDiv { 
+  visibility: hidden;
+} */
+
 .triviaDiv {
+  visibility: hidden;
   color: white ;
   font-family: 'Inconsolata', monospace;
   text-align: center;
@@ -32,21 +38,21 @@ h1 {
   top: 50%;
   left: 40%;
   font-family: 'Inconsolata', monospace;
+  text-shadow: 2px 2px green;
 }
 
 button:hover {
   background-color: white;
   color:green;
   border: green;
+
 }
 
-#timer{
+h2 {
   text-align: center;
-  width: fit-content;
-  margin: auto;
-  color: white;
+  color:white;
+  font-size: 50px;
 }
-
 
   
   
