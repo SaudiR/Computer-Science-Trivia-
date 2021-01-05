@@ -4,12 +4,14 @@ const answersDiv = document.querySelector('#answers')
 const questionHeading = document.querySelector('#question')
 const triviaDiv = document.querySelector('.triviaDiv')
 
-
+// Start Game button 
 button.addEventListener('click', getData)
-
+// retrieve data from api 
 async function getData() {
   let response = await axios.get(`${BASE_URL}`)
+  // show triviaDiv after start button is clicked
   triviaDiv.style.visibility = 'visible'
+  // retrieve questions and answers from api 
   triviaGameQuestions(response.data.results)
   triviaGameAnswers(response.data.results)
 }
@@ -20,7 +22,7 @@ let currentQuestion = 1
 let totalQuestions 
 
 function triviaGameQuestions(question) {
-  // console.log(question[index].question)
+  
   questionHeading.innerText = question[index].question
 }
 
@@ -35,7 +37,7 @@ function triviaGameAnswers(answers) {
   let input2Value = shuffledAnswers[1].split(' ').join('-')
   let input3Value = shuffledAnswers[2].split(' ').join('-')
   let input4Value = shuffledAnswers[3].split(' ').join('-')
-  // console.log(shuffledAnswers[0])
+   
   answersDiv.innerHTML = `
   <input type="radio" id="choice-1" name="answer" value=${input1Value}>
   <label for="choice-1">${shuffledAnswers[0]}</label>
@@ -49,6 +51,7 @@ function triviaGameAnswers(answers) {
   <input type="radio" id="choice-4" name="answer" value=${input4Value}>
   <label for="choice-4">${shuffledAnswers[3]}</label>
   <br>
+  <br>
   <button class='answerButton'>Submit</button>
   `
   const answerButton = document.querySelector('.answerButton')
@@ -59,9 +62,10 @@ function triviaGameAnswers(answers) {
   
     if (checkedAnswer === answers[index].correct_answer) {
       score++
-    }
+    } 
 
-    index++ 
+
+    index++  
     currentQuestion++
 
     if (index < answers.length) {

@@ -3,25 +3,35 @@ body {
 }
 
 h1 {
-  color: white ;
+  color: beige ;
   text-align: center;
   font-size: 50px;
   font-family: 'Inconsolata', monospace;
   background-color: black ;  
-  border-style: solid;
+  border-style: dotted;
   border-color: green;
   text-shadow: 2px 2px green;
   margin: 50px 50px;
 }
 
+.container {
+  color: beige;
+  background-color: black;
+  border-style: dotted;
+  border-color: green;
+  font-family: 'Inconsolata', monospace;
+  margin: 50px 50px;
+  font-size: 30px;
+}
+
 .triviaDiv {
   visibility: hidden;
-  color: white ;
+  color: beige ;
   font-family: 'Inconsolata', monospace;
   text-align: center;
   font-size: 25px;
   background-color: black ;
-  border-style: solid;
+  border-style: dotted;
   border-color: green;
   text-shadow: 2px 2px green;
   padding: 20px 20px 20px 20px ;
@@ -31,7 +41,7 @@ h1 {
 .button {
   font-size: 35px;
   background-color: black;
-  color:white;
+  color: beige;
   border-color: green;
   position: center;
   position: absolute;
@@ -50,8 +60,20 @@ button:hover {
 
 h2 {
   text-align: center;
-  color:white;
+  color: beige;
   font-size: 50px;
+}
+
+.answerButton {
+  height: 45px;
+  width: 85px;
+  font-size: 20px;
+  font-family: 'Inconsolata', monospace;
+  font-style: bold;
+}
+
+.answerButton:hover {
+  color: green;
 }
 
 @media screen and (max-width: 500px) {
