@@ -21,8 +21,8 @@ I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a
  
 
 # Post-MVP
-- Include timer for questions. 
-- Add results screen when the game is completed. 
+- Include a result screen at the end of game. 
+- . 
 
 
 # Priority Matrix 
@@ -30,11 +30,11 @@ I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a
 ![Priority Matrix](https://i.imgur.com/HjRTNUV.png)
 
 # Time-Frame
-| Component | Priority| Time Invested |Time Invested  |
+| Component | Priority| Time Invested |Actual Time   |
 | ------------- |:-------------:| -----:| ------:
 | Basic HTML Structure     | H | 3hr |
 | CSS stucture/Flexbox    | H      |   4hr |
-| create a timer | L | 4hr |
+| create result screen | H | 4hr |
 | Pull info. from api | H | 7hr 
 | Javascript functions | H |  12hr
 
