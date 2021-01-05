@@ -2,7 +2,7 @@
 
 # Computer Science Trivia 
 
-I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a computer science themed trivia game. Players will be able to choose the level they want to play at and the amount of questions asked. 
+I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a computer science themed trivia game. Players will answer 10 randomly generated computer science questions and be shown their score at the end of the game. 
 
 
   # API- Snippet 
@@ -23,7 +23,13 @@ I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a
 # Post-MVP
 - Include a result screen at the end of game. 
 - create radio buttons to display the questions. 
-- 
+- create a timer 
+- create a loading screen 
+
+
+#Snippet of code 
+
+![Radio buttons code](https://i.imgur.com/up86cdQ.png?1)
 
 
 # Priority Matrix 
