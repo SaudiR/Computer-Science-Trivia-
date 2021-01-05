@@ -42,12 +42,12 @@ I am using the (https://opentdb.com/api.php?amount=10&category=18) Api to make a
 # Time-Frame
 | Component | Priority| Time Invested |Actual Time   |
 | ------------- |:-------------:| -----:| ------:
-| Basic HTML Structure     | H | 3hr | 2hr | 2hr
+| Basic HTML Structure     | H | 3hr | 4hr | 4hr
 | CSS stucture/Flexbox    | H    |  9hr | 9hr 
-| create result screen | H | 4hr | 4hr | 4hr
-| Pull info from api | H | 2hr  | 4hr | 4hr 
-| Create radio butons for questions | L |  4hr | 2hr
-|Create start button| H | 30min | 30min
+| create result screen | H | 4hr | 6hr | 6hr
+| Pull info from api | H | 2hr  | 6hr | 6hr 
+| Create radio butons for questions | L |  4hr | 4hr
+|Create start button| H | 1hr | 1hr
 | Shuffle questions | H | 3hr | 3hr 
 
 
