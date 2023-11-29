@@ -4,13 +4,14 @@ const answersDiv = document.querySelector('#answers')
 const questionHeading = document.querySelector('#question')
 const triviaDiv = document.querySelector('.triviaDiv')
 const container = document.querySelector('.container')
+
 // Start Game button 
 button.addEventListener('click', getData)
 // retrieve data from api 
 async function getData() {
   let response = await axios.get(`${BASE_URL}`)
   triviaDiv.style.visibility = 'visible'
-  container.style.visibility = 'visible'
+  container.style.visibility = 'hidden'
   triviaGameQuestions(response.data.results)
   triviaGameAnswers(response.data.results)
 }
