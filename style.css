@@ -39,7 +39,8 @@ h1 {
   margin: 0 50px 50px 50px;
 }
 
-.button {
+.button,
+.play-again-btn {
   font-size: 35px;
   background-color: black;
   color: beige;

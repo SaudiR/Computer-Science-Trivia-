@@ -91,11 +91,13 @@ function shuffle(array) {
   }
   return array
 }
-
+ 
 function endGame() {
   triviaDiv.innerHTML = `
     <h2> Thank You for Playing!</h2> 
     <p>Out of ${totalQuestions} questions you scored a total of ${score} points</p>
+    <button class="play-again-btn" onClick="window.location.reload()"> Play Again </button>
     `
+    
 }
 
